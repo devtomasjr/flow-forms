@@ -3,6 +3,7 @@ import cors = require('cors');
 import Database from "../database/database";
 
 
+const port = process.env.PORT ?? 3000
 const app = express()
 
 app.use(express.json())
@@ -33,6 +34,6 @@ app.get("/", (req: express.Request, res: express.Response) => {
 app.use("/public", express.static("./src/infra/public"));
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server listening on port 3011')
 })
