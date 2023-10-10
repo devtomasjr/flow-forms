@@ -1,6 +1,5 @@
 import express =  require("express")
 import cors = require('cors');
-import Database from "../database/database";
 
 
 const port = process.env.PORT ?? 3000
