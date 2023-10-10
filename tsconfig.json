@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES2017",
+		"lib": ["ES2017", "DOM"],
+		"outDir": "build",
+		"strict": true,
+		"sourceMap": true
+	},
+	"exclude": [
+		"node_modules",
+		"build"
+	]
+}
