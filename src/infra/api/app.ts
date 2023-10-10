@@ -33,6 +33,6 @@ app.get("/", (req: express.Request, res: express.Response) => {
 app.use("/public", express.static("./src/infra/public"));
 
 
-app.listen(3011, () => {
+app.listen(3000, () => {
   console.log('Server listening on port 3011')
 })

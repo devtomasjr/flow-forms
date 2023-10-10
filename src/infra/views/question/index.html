@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title>Task List</title>
+    <title>Flow Forms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
@@ -15,22 +15,22 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/pt-br.js"></script><script src="../../../public/enums?name=statusTask"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/pt-br.js"></script>
 <script type="text/javascript">
     async function getQuestion(id = 1) {
         const questionContainer = document.getElementById('question-container');
         questionContainer.innerHTML = '';
-        const response = await axios.get('http://localhost:3011/api/questions/' + id);
+        const response = await axios.get('/api/questions/' + id);
         const question = response.data;
 
         const questionDiv = document.createElement('div');
         questionDiv.classList.add('d-block');
         
         questionDiv.innerHTML = `
-            <h1>${question.title}</h1>
+            <h1 class="fs-1">${question.title}</h1>
             <div id="answers-container" class="d-flex align-items-center justify-content-center gap-3">
                 ${question.answer.length ? question.answer.map(answer =>
-                    `<button class="btn btn-outline-light mt-4" onclick="getQuestion(${answer.next})">${answer.text}</button>`
+                    `<button class="btn btn-outline-light mt-4 fs-2" onclick="getQuestion(${answer.next})">${answer.text}</button>`
                 ).join('') : ''}
             </div>
         `;

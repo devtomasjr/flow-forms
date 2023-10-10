@@ -5,13 +5,14 @@
   "main": "build/infra/api/app.js",
   "scripts": {
     "start": "node build/infra/api/app",
-    "build": "tsc && node build/infra/api/app",
+    "build": "tsc",
     "test": "node --test test/question.test",
     "test:watch": "node --watch --test test/question.test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.10",
     "@types/cors": "^2.8.14",
     "@types/express": "^4.17.18",
     "@types/node": "^20.6.0",

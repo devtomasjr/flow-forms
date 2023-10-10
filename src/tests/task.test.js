@@ -1,19 +1,12 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
-import Task from '../src/task/task.js';
+import Question from '../../build/domain/question/question.js';
 
 
-describe('add task', () => {
-    it('should add task', () => {
-        const task = Task.add({
-            title: 'Test task',
-            description: 'Test task',
-            status: 'To Do',
-            idStatus: 1,
-            timeEstimated: 0,
-            timeSpent: 0,
-            createdAt: new Date()
-        });
-        assert.equal(task.id, 1);
+describe('add question', () => {
+    it('should add question', () => {
+        const question = new Question('question', 'answer');
+        assert.strictEqual(question.question, 'question');
+        assert.strictEqual(question.answer, 'answer');
     });
 });

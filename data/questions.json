@@ -1,1 +1,65 @@
-[]
+[
+    {
+        "id": 1,
+        "title": "Você aceita uma viagem comigo?",
+        "answer": [
+            {
+                "id": 1,
+                "text": "Sim",
+                "next": 2
+            },
+            {
+                "id": 2,
+                "text": "Não",
+                "next": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Quer uma viagem totalmente surpresa, parcialmente surpresa ou totalmente planejada em conjunto?",
+        "answer": [
+            {
+                "id": 1,
+                "text": "Totalmente surpresa",
+                "next": 4
+            },
+            {
+                "id": 2,
+                "text": "Parcialmente surpresa",
+                "next": 5
+            },
+            {
+                "id": 3,
+                "text": "Totalmente planejada em conjunto",
+                "next": 6
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Opção errada, volte para a pergunta anterior!",
+        "answer": [
+            {
+                "id": 1,
+                "text": "Voltar",
+                "next": 1
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Você acaba de ganhar uma viagem surpresa!<br><br>Aguarde instruções do amor da sua vida!",
+        "answer": []
+    },
+    {
+        "id": 5,
+        "title": "Você acaba de ganhar uma viagem parcialmente surpresa!<br><br>Você poderá escolher algumas coisas da viagem!<br><br>Aguarde instruções do amor da sua vida!",
+        "answer": []
+    },
+    {
+        "id": 6,
+        "title": "Você acaba de ganhar uma viagem totalmente planejada em conjunto!<br><br>Esoolheremos juntos cada detalhe da viagem!<br><br>Aguarde instruções do amor da sua vida!",
+        "answer": []
+    }
+]
